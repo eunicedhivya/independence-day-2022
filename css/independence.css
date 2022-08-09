@@ -142,6 +142,29 @@ body{
     max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
+}
+
+.arro-nav{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.arro-nav button{
+  width: 50px;
+  background-color: transparent;
+  color: #000;
+  border-radius: 50%;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
 .tenure-nav ul{
@@ -149,23 +172,41 @@ body{
     column-gap: 50px;
     width: var(--calcWidthHorTimeline);
     transition: all .5s ease;
+    position: relative;
+}
+.tenure-nav ul::before{
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  display: block;
+  width: calc(100% - 100px);
+  height: 2px;
+  background-color: #ccc;
+  z-index: -1;
 }
 .tenure-nav ul li{
-  width: 140px; text-align: center;
+  width: 140px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .tenure-nav ul li.active span{
   background-color: #9F9172;
 }
 .tenure-nav ul li span{
   display: block;
-  background-color: #000;
-  color: #fff;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  padding: 11px;
-  line-height: 15px;
-  margin: auto;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    padding: 6px 0;
+    line-height: 11px;
+    margin: 0 auto 5px auto ;
+    font-size: 12px;
 }
 
 .pm-content {
@@ -189,6 +230,14 @@ body{
   width: 1px;
   height: 100%;
   background-color: #ccc;
+}
+
+.ver-timeline{
+  opacity: 0;
+  transition: all .5s ease;
+}
+.ver-timeline.active{
+  opacity: 1;
 }
 
 
@@ -224,6 +273,9 @@ body{
     background-color: var(--dark-brown);
     top: 0px;
     left: -27px;
+  }
+  .pm-content{
+    flex-direction: column;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -284,4 +336,5 @@ body{
   .timeline ul li:hover::before {
     background-color: #000;
   }
+  .arro-nav button { width: 40px; margin-top: 50px;}
 }
