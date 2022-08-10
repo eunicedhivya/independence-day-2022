@@ -361,7 +361,7 @@ body{
 }
 
 .faded{
-  opacity: .2;
+  opacity: 0;
 }
 
 @media only screen and (min-width: 1px) and (max-width:767px) {
