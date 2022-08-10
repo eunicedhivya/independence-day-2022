@@ -1,17 +1,17 @@
-window.addEventListener("scroll", reveal);
+window.addEventListener("scroll", showTimelineItem);
 
-function reveal(){
-    var reveals = document.querySelectorAll(".ver-timeline");
-    for(var i=0; i<reveals.length; i++){
+function showTimelineItem(){
+    var timelineItems = document.querySelectorAll(".ver-timeline");
+    for(var i=0; i<timelineItems.length; i++){
         
-        var windowheight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
+        var windowHeight = window.innerHeight;
+        var revealtop = timelineItems[i].getBoundingClientRect().top;
         var revealpoint = 150;
 
-        if(revealtop < windowheight - revealpoint){
-            reveals[i].classList.add("active");
+        if(revealtop < windowHeight - revealpoint){
+            timelineItems[i].classList.add("active");
         }else{
-            reveals[i].classList.remove("active");
+            timelineItems[i].classList.remove("active");
         }
     }
 }
