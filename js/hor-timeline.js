@@ -11,8 +11,9 @@ var pmdata = {"1":{"name":"Jawaharlal Nehru","tenure":"August 1947 to May 1964",
 
 
 function goNext(){
-    if(activeSlide <= totalSlides){
-        document.getElementById("nextBtn").disabled = false;
+    if(activeSlide < totalSlides){
+        document.getElementById("prevBtn").disabled = false;
+        document.getElementById("prevBtn").classList.remove("faded");
         var moveTenureNav = -(activeSlide * 150);
         pmYearNav.style.transform = "translateX("+moveTenureNav+"px)";
         pmYearNavAll.forEach(function (element) {
@@ -20,20 +21,24 @@ function goNext(){
         });
         document.getElementById("ten"+(activeSlide+1)).classList.add("active");
         activeSlide++;
-        console.log(activeSlide, pmdata[activeSlide.toString()]);
+        // console.log(activeSlide, pmdata[activeSlide.toString()]);
 
         pmName.innerHTML = pmdata[activeSlide.toString()]["name"]
         pmTenure.innerHTML = pmdata[activeSlide.toString()]["tenure"]
         pmDesc.innerHTML = pmdata[activeSlide.toString()]["bio"]
         
-    }else{
+    }
+    
+    if(activeSlide === totalSlides){
         document.getElementById("nextBtn").disabled = true;
+        document.getElementById("nextBtn").classList.add("faded");
     }
     
 }
 function goPrev(){
     if(activeSlide > 1){
-        document.getElementById("prevBtn").disabled = false;
+        document.getElementById("nextBtn").disabled = false;
+        document.getElementById("nextBtn").classList.remove("faded");
         activeSlide--;
         var moveTenureNav = -((activeSlide-1) * 150);
         pmYearNav.style.transform = "translateX("+moveTenureNav+"px)";
@@ -41,11 +46,30 @@ function goPrev(){
             element.classList.remove("active");
         });
         document.getElementById("ten"+(activeSlide)).classList.add("active");
-        
+        console.log(activeSlide);
         pmName.innerHTML = pmdata[activeSlide.toString()]["name"]
         pmTenure.innerHTML = pmdata[activeSlide.toString()]["tenure"]
         pmDesc.innerHTML = pmdata[activeSlide.toString()]["bio"]
-    }else{
-        document.getElementById("prevBtn").disabled = true;
     }
+    if(activeSlide === 1){
+        document.getElementById("prevBtn").disabled = true;
+        document.getElementById("prevBtn").classList.add("faded");
+    }
+}
+
+var looped = document.querySelectorAll("#pm-years li")
+
+for(var j=0; j<looped.length; j++){
+    // console.log(j+1, loopved[j]);
+    looped[j].addEventListener("click", function(e){
+        pmYearNavAll.forEach(function (element) {
+            element.classList.remove("active");
+        });
+        document.getElementById(this.id).classList.add("active");
+        // console.log(this.id.split("n")[1]);
+        pmName.innerHTML = pmdata[this.id.split("n")[1]]["name"]
+        pmTenure.innerHTML = pmdata[this.id.split("n")[1]]["tenure"]
+        pmDesc.innerHTML = pmdata[this.id.split("n")[1]]["bio"]
+        activeSlide = parseInt(this.id.split("n")[1]);
+    })
 }

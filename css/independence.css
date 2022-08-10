@@ -338,7 +338,7 @@ body{
   background-color: orange;
   color: #fff;
 }
-.timeline ul li:first-child .timeline-content h2,
+.timeline ul li:first-child .timeline-content h3,
 .timeline ul li:first-child .timeline-content h4,
 .timeline ul li:first-child .timeline-content p{
   background-color: orange;
@@ -347,6 +347,10 @@ body{
 
 .tenure-nav{
   margin-bottom: 40px;
+}
+
+.faded{
+  opacity: .2;
 }
 
 @media only screen and (min-width: 1px) and (max-width:767px) {
