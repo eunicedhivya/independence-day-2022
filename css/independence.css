@@ -222,7 +222,7 @@ body{
   display: block;
   width: calc(100% - 100px);
   height: 1px;
-  background-color: #000000;
+  background-color: #c3b390;
   z-index: 0;
 }
 .tenure-nav ul li{
@@ -232,13 +232,17 @@ body{
   line-height: 16px;
   font-weight: bold;
   text-transform: uppercase;
+  color: #999;
+}
+.tenure-nav ul li.active{
+  color: #000;
 }
 .tenure-nav ul li.active span{
   background-color: #9F9172;
 }
 .tenure-nav ul li span{
   display: block;
-    background-color: #000;
+    background-color: #999;
     color: #fff;
     border-radius: 50%;
     width: 25px;
@@ -272,7 +276,7 @@ body{
   transform: translateX(-50%);
   width: 2px;
   height: calc( 100% + 50px );
-  background-color: #ccc;
+  background-color: #c3b390;
 }
 
 /* .all-pms{
@@ -324,9 +328,10 @@ body{
     text-transform: uppercase;
 }
 #pmTenure{
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: 500;
+  font-style: italic;
 }
 
 #horTimeline{
@@ -338,11 +343,15 @@ body{
   background-color: orange;
   color: #fff;
 }
-.timeline ul li:first-child .timeline-content h3,
+
 .timeline ul li:first-child .timeline-content h4,
 .timeline ul li:first-child .timeline-content p{
   background-color: orange;
   color: #fff;
+}
+
+.timeline ul li:first-child .timeline-content h3{
+  color: orange;
 }
 
 .tenure-nav{
