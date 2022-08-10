@@ -11,28 +11,29 @@
     <link rel="stylesheet" href="css/independence.css" />
     <div class="tv9-interactives">
         <section class="cover">
+            <img src="img/independence-day.jpg" />
             <h1>India in 75 years</h1>
             <p>From being a colony to becoming an important nation in world politics, India has come a long, long way. When the Britishers came to India, it was a large undivided land filled with wealth and riches. When they left, India was struggling with poverty and chaos.</p>
         </section>
         <section class="block">
             <div class="section-intro">
-                <h2>Timeline of Events</h2>
+                <h2 class="sub-head">Major milestones</h2>
             </div>
 
             <div class="timeline">
-                <div class="timeline-start">
+                <!-- <div class="timeline-start">
                   <div class="timeline-content">
                     <h3>1947</h3>
                     <p>Independence and Partition</p>
                   </div>
-                </div>
+                </div> -->
               <ul>
                 <li class="ver-timeline">
                   <div class="timeline-content">
                     <h3 class="timeline-date">1947</h3>
                     <h4>Independence and Partition</h4>
                     <div>
-                        <img class="timeline-img" src="https://placehold.jp/c2b28f/ffffff/125x125.png" />
+                        <img class="timeline-img" src="https://placehold.jp/ffffff/c2b28f/125x125.png" />
                         <p>India gained its Independence from the long British rule on August 15, 1947. Just before the clock struck 12, on August 14, the first Prime Minister of India, Jawaharlal Nehru delivered the famous 'Tryst with Destiny' speech to the Indian Constituent Assembly in the Parliament.</p>
                     </div>
                   </div>
@@ -867,34 +868,34 @@ The year 2020 was sort of a nightmare for the majority of Indians, as the COVID-
               </div>
             </div>
         </section>
-        <section class="block">
+        <section class="block pt100" id="horTimeline" style="display: block;">
             <div class="section-intro2">
-                <h2>Prime Ministers of India</h2>
+                <h2 class="sub-head">Prime Ministers of India</h2>
                 <p>Since 1947 India has had 15 prime ministers. Jawaharlal Nehru was the India's first prime minister, serving as prime minister of the Dominion of India</p>
             </div>
             <div class="hor-timeline">
                 <div class="arro-nav">
-                    <button onclick="goPrev()">
+                    <button id="prevBtn" onclick="goPrev()">
                       <img src="img/chevron-left.svg" />
                     </button>
-                    <button onclick="goNext()"><img src="img/chevron-right.svg" /></button>
+                    <button id="nextBtn" onclick="goNext()"><img src="img/chevron-right.svg" /></button>
                 </div>
                 <div class="tenure-nav">
                   <ul id="pm-years">
                     <li id="ten1" class="active"><span>1</span>Aug 1947 to May 1964</li>
                     <li id="ten2"><span>2</span>Jun 1964 to Jan 1966</li>
-                    <li id="ten3"><span>3</span>January 1966 to March 1977</li>
-                    <li id="ten4"><span>4</span>March 1977 to July 1979</li>
-                    <li id="ten5"><span>5</span>July 1970 to January 1980</li>
-                    <li id="ten6"><span>6</span>January 1980 to October 1984</li>
-                    <li id="ten7"><span>7</span>October 1984 to December 1989</li>
-                    <li id="ten8"><span>8</span>December 1989 to November 1990</li>
-                    <li id="ten9"><span>9</span>November 1990 to June 1991</li>
-                    <li id="ten10"><span>10</span>June 1991 to May 1996</li>
-                    <li id="ten11"><span>11</span>May 1996 to June 1996</li>
-                    <li id="ten12"><span>12</span>June 1996 to April 1997</li>
-                    <li id="ten13"><span>13</span>April 1997 to March 1998</li>
-                    <li id="ten14"><span>14</span>March 1998 to May 2004</li>
+                    <li id="ten3"><span>3</span>Jan 1966 to Mar 1977</li>
+                    <li id="ten4"><span>4</span>Mar 1977 to Jul 1979</li>
+                    <li id="ten5"><span>5</span>Jul 1970 to Jan 1980</li>
+                    <li id="ten6"><span>6</span>Jan 1980 to Oct 1984</li>
+                    <li id="ten7"><span>7</span>Oct 1984 to Dec 1989</li>
+                    <li id="ten8"><span>8</span>Dec 1989 to Nov 1990</li>
+                    <li id="ten9"><span>9</span>Nov 1990 to Jun 1991</li>
+                    <li id="ten10"><span>10</span>Jun 1991 to May 1996</li>
+                    <li id="ten11"><span>11</span>May 1996 to Jun 1996</li>
+                    <li id="ten12"><span>12</span>Jun 1996 to Apr 1997</li>
+                    <li id="ten13"><span>13</span>Apr 1997 to Mar 1998</li>
+                    <li id="ten14"><span>14</span>Mar 1998 to May 2004</li>
                     <li id="ten15"><span>15</span>May 2004 to May 2014</li>
                     <li id="ten16"><span>16</span>May 2014 to Present</li>
                   </ul>
@@ -910,6 +911,11 @@ The year 2020 was sort of a nightmare for the majority of Indians, as the COVID-
                   </div>
                 </div>
             </div>
+        </section>
+        <section class="block pt100">
+          <div class="section-intro">
+              <h2 class="sub-head">Timeline of Events</h2>
+          </div>
         </section>
     </div>
     <script src="js/hor-timeline.js"></script>

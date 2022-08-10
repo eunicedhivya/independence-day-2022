@@ -1,5 +1,5 @@
 
-var activeSlide = 1, totalSlides=20;
+var activeSlide = 1, totalSlides=16;
 var pmYearNav = document.getElementById("pm-years");
 var pmYearNavAll = document.querySelectorAll("#pm-years li");
 var pmName = document.getElementById("pmName");
@@ -11,7 +11,8 @@ var pmdata = {"1":{"name":"Jawaharlal Nehru","tenure":"August 1947 to May 1964",
 
 
 function goNext(){
-    if(activeSlide < totalSlides){
+    if(activeSlide <= totalSlides){
+        document.getElementById("nextBtn").disabled = false;
         var moveTenureNav = -(activeSlide * 150);
         pmYearNav.style.transform = "translateX("+moveTenureNav+"px)";
         pmYearNavAll.forEach(function (element) {
@@ -26,12 +27,13 @@ function goNext(){
         pmDesc.innerHTML = pmdata[activeSlide.toString()]["bio"]
         
     }else{
-        console.log("cant move further"); 
+        document.getElementById("nextBtn").disabled = true;
     }
     
 }
 function goPrev(){
     if(activeSlide > 1){
+        document.getElementById("prevBtn").disabled = false;
         activeSlide--;
         var moveTenureNav = -((activeSlide-1) * 150);
         pmYearNav.style.transform = "translateX("+moveTenureNav+"px)";
@@ -44,6 +46,6 @@ function goPrev(){
         pmTenure.innerHTML = pmdata[activeSlide.toString()]["tenure"]
         pmDesc.innerHTML = pmdata[activeSlide.toString()]["bio"]
     }else{
-        console.log("cant move further"); 
+        document.getElementById("prevBtn").disabled = true;
     }
 }
