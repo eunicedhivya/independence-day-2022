@@ -311,7 +311,7 @@ body{
   .timeline .timeline-start::before,
   .timeline .timeline-end::before {
     left: 0;
-    transform: translateX(-27px);
+    transform: translateX(-30px);
     top: 0;
   }
   
