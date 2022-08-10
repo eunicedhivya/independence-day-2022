@@ -68,6 +68,9 @@ body{
     width: 100%;
     max-width: 800px;
 }
+.section-intro2 p {
+  width: 90%; margin: auto;
+}
 .section-intro h2,
   .section-intro2 h2 {
   margin-bottom: 20px;
