@@ -62,24 +62,42 @@ body{
   max-width: 800px;
 }
 
-.section-intro2  {
+.section-intro2{
   margin: 0 auto 30px;
     text-align: center;
     width: 100%;
     max-width: 800px;
 }
-.section-intro2 p {
+.section-intro3  {
+  margin: 0 auto 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+.section-intro p,.section-intro2 p {
   width: 90%; margin: auto;
+}
+.section-intro3 p{
+  width: 60%; margin: auto;
 }
 .section-intro h2,
   .section-intro2 h2 {
   margin-bottom: 20px;
 }
+  .section-intro3 h2 {
+  margin-bottom: 30px;
+}
+
+.iframecontainer {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
 
 .timeline {
   width: 80%;
   height: auto;
-  max-width: 960px;
+  max-width: 900px;
   margin: 0 auto 0 auto;
   position: relative;
   padding-bottom: 70px;
