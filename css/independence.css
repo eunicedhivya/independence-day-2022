@@ -282,7 +282,10 @@ body{
 .timeline .timeline-start .timeline-content,
   .timeline .timeline-end .timeline-content{
     background-color: transparent;
+    padding-top: 0;
   }
+
+  
 .timeline .timeline-start .timeline-content h3,
   .timeline .timeline-end .timeline-content h3{
     color: var(--dark-brown);
@@ -311,7 +314,7 @@ body{
   .timeline .timeline-start::before,
   .timeline .timeline-end::before {
     left: 0;
-    transform: translateX(-30px);
+    transform: translateX(-34px);
     top: 0;
   }
   
@@ -381,6 +384,8 @@ body{
     opacity: 1;
     transform: translateX(0);
   }
+  .timeline .timeline-end {
+    bottom: -65px;}
 }
 @media only screen and (min-width: 768px) {
   .all-pms{
