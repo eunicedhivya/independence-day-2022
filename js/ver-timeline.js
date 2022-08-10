@@ -15,3 +15,29 @@ function showTimelineItem(){
         }
     }
 }
+
+
+var loadmore = document.getElementsByClassName("load-more")[0]
+
+var noItemsLoad = 5;
+
+var currentItemsDisplay = 5;
+
+loadmore.addEventListener("click", function(e){
+    var elementsList = document.getElementsByClassName("ver-timeline");
+    // console.log(elementsList);
+    e.target.classList.add("show-loader");
+
+    for(var i=currentItemsDisplay; i<currentItemsDisplay + noItemsLoad; i++){
+        console.log(i, elementsList[i]);
+        e.target.classList.remove("show-loader");
+        if(elementsList[i]){
+            elementsList[i].style.display = "block";
+        }
+    }
+    currentItemsDisplay += noItemsLoad;
+
+    if(currentItemsDisplay >= elementsList.length){
+        e.target.classList.add("done");
+    }
+})
