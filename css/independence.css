@@ -305,6 +305,7 @@ body{
   max-width: 300px;
   width: 60%;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .load-more.done{
