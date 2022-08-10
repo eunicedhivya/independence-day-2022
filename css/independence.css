@@ -31,6 +31,7 @@ body{
 .cover h1{
   font-size: 2.5rem;
   font-weight: bold;
+  line-height: 2.5rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
 }
@@ -45,14 +46,21 @@ body{
 }
 
 .section-intro  {
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   text-align: center;
   width: 100%;
   max-width: 800px;
 }
 
-.section-intro  {
+.section-intro2  {
   margin-bottom: 30px;
+    text-align: center;
+    width: 50%;
+    max-width: 800px;
+}
+.section-intro h2,
+  .section-intro2 h2 {
+  margin-bottom: 20px;
 }
 
 .timeline {
@@ -271,6 +279,15 @@ body{
   display: none;
 }
 
+.timeline .timeline-start .timeline-content,
+  .timeline .timeline-end .timeline-content{
+    background-color: transparent;
+  }
+.timeline .timeline-start .timeline-content h3,
+  .timeline .timeline-end .timeline-content h3{
+    color: var(--dark-brown);
+  }
+
 
 
 @media only screen and (min-width: 1px) and (max-width:767px) {
@@ -297,6 +314,7 @@ body{
     transform: translateX(-27px);
     top: 0;
   }
+  
   /* .timeline .timeline-start::before, .timeline .timeline-end::before{
     display: none;
   } */
@@ -326,6 +344,7 @@ body{
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    padding: 0 20px;
   }
   .pm-content{
     text-align: center;
@@ -449,5 +468,12 @@ body{
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
+  }
+  .timeline::before {
+    top: 40px;
+    height: calc( 100% - 40px);
+  }
+  .timeline .timeline-end {
+    bottom: -80px;
   }
 }
