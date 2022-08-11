@@ -331,6 +331,11 @@ body{
   cursor: pointer;
 }
 
+.load-more img{
+  width: 20px;
+  display: inline-block;
+}
+
 .load-more.done{
   display: none;
 }
