@@ -62,14 +62,28 @@ var looped = document.querySelectorAll("#pm-years li")
 for(var j=0; j<looped.length; j++){
     // console.log(j+1, loopved[j]);
     looped[j].addEventListener("click", function(e){
+        
+        activeSlide = parseInt(this.id.split("n")[1]);
+        if(activeSlide === 1){
+            document.getElementById("prevBtn").disabled = true;
+            document.getElementById("prevBtn").classList.add("faded");
+        }
+        if(activeSlide === totalSlides){
+            document.getElementById("nextBtn").disabled = true;
+            document.getElementById("nextBtn").classList.add("faded");
+        }
+        document.getElementById("prevBtn").disabled = false;
+        document.getElementById("prevBtn").classList.remove("faded");
+        document.getElementById("nextBtn").disabled = false;
+        document.getElementById("nextBtn").classList.remove("faded");
         pmYearNavAll.forEach(function (element) {
             element.classList.remove("active");
         });
         document.getElementById(this.id).classList.add("active");
-        // console.log(this.id.split("n")[1]);
+        var moveTenureNav = -((activeSlide-1) * 150);
+        pmYearNav.style.transform = "translateX("+moveTenureNav+"px)";
         pmName.innerHTML = pmdata[this.id.split("n")[1]]["name"]
         pmTenure.innerHTML = pmdata[this.id.split("n")[1]]["tenure"]
         pmDesc.innerHTML = pmdata[this.id.split("n")[1]]["bio"]
-        activeSlide = parseInt(this.id.split("n")[1]);
     })
 }
