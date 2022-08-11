@@ -13,6 +13,7 @@ var pmdata = {"1":{"name":"Jawaharlal Nehru","tenure":"August 1947 to May 1964",
 
 function goNext(){
     if(activeSlide < totalSlides){
+        
         document.getElementById("prevBtn").disabled = false;
         document.getElementById("prevBtn").classList.remove("faded");
         var moveTenureNav = -(activeSlide * 150);
@@ -38,6 +39,7 @@ function goNext(){
 }
 function goPrev(){
     if(activeSlide > 1){
+        
         document.getElementById("nextBtn").disabled = false;
         document.getElementById("nextBtn").classList.remove("faded");
         activeSlide--;
@@ -48,10 +50,11 @@ function goPrev(){
         });
         document.getElementById("ten"+(activeSlide)).classList.add("active");
         // console.log(activeSlide);
-        pmImg.src = baseUrl + pmdata[activeSlide.toString()]["img"] + "-min.webp"
-        pmName.innerHTML = pmdata[activeSlide.toString()]["name"]
-        pmTenure.innerHTML = pmdata[activeSlide.toString()]["tenure"]
-        pmDesc.innerHTML = pmdata[activeSlide.toString()]["bio"]
+        pmImg.src = baseUrl + pmdata[activeSlide.toString()]["img"] + "-min.webp";
+        pmName.innerHTML = pmdata[activeSlide.toString()]["name"];
+        pmTenure.innerHTML = pmdata[activeSlide.toString()]["tenure"];
+        pmDesc.innerHTML = pmdata[activeSlide.toString()]["bio"];
+
     }
     if(activeSlide === 1){
         document.getElementById("prevBtn").disabled = true;
@@ -86,9 +89,9 @@ for(var j=0; j<looped.length; j++){
         document.getElementById(this.id).classList.add("active");
         var moveTenureNav = -((activeSlide-1) * 150);
         pmYearNav.style.transform = "translateX("+moveTenureNav+"px)";
-        pmImg.src = baseUrl + pmdata[this.id.split("n")[1]]["img"] + "-min.webp"
-        pmName.innerHTML = pmdata[this.id.split("n")[1]]["name"]
-        pmTenure.innerHTML = pmdata[this.id.split("n")[1]]["tenure"]
-        pmDesc.innerHTML = pmdata[this.id.split("n")[1]]["bio"]
+        pmImg.src = baseUrl + pmdata[this.id.split("n")[1]]["img"] + "-min.webp";
+        pmName.innerHTML = pmdata[this.id.split("n")[1]]["name"];
+        pmTenure.innerHTML = pmdata[this.id.split("n")[1]]["tenure"];
+        pmDesc.innerHTML = pmdata[this.id.split("n")[1]]["bio"];
     })
 }
