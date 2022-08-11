@@ -78,7 +78,9 @@ body{
   width: 90%; margin: auto;
 }
 .section-intro3 p{
-  width: 60%; margin: auto;
+  width: 80%;
+    margin: auto;
+    max-width: 500px;
 }
 .section-intro h2,
   .section-intro2 h2 {
@@ -89,9 +91,9 @@ body{
 }
 
 .iframecontainer {
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 30px;
+  width: 90%;
+    max-width: 800px;
+    margin: 0 auto 60px;
 }
 
 .timeline {
