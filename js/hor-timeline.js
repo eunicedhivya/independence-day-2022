@@ -1,6 +1,6 @@
 
 var activeSlide = 1, totalSlides=16;
-var baseUrl = "img/pm/";
+var baseUrl = "https://dsventures.github.io/independence-day-2022/img/pm/";
 var pmYearNav = document.getElementById("pm-years");
 var pmYearNavAll = document.querySelectorAll("#pm-years li");
 var pmImg = document.getElementById("pmImg");
